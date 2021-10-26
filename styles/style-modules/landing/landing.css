@@ -1,0 +1,5717 @@
+/* /* /* Here write css for index page
+/* Import CSS */
+:root {
+    /* Define default values for margin and padding */
+    --left-right-pading: 100px;
+    --main-component-padding: 100px;
+    --left-right-pading-for-media-desktop: 120px;
+    --main-component-padding-for-media-desktop: 120px;
+    --main-component-padding-mobile-tap: 50px;
+    --left-right-pading-mobile-tap: 20px;
+    --main-component-padding-dedicated-for-mobile: 10px;
+    --left-right-pading-dedicated-for-mobile: 10px;
+    /* Define shadow */
+    --shadow_200: 0px 4px 6px -4px rgba(24, 39, 75, 0.12), 0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+    --shadow_400: 0px 6px 12px -6px rgba(24, 39, 75, 0.12), 0px 8px 24px -4px rgba(24, 39, 75, 0.08);
+    /* Define button radius */
+    --button-radius: 6px;
+    /* Gogomet font */
+    --gogomet-font: instabread;
+}
+
+@font-face {
+    font-family: "instabread";
+    src: url("/assets/fonts/instabread/instabread.ttf");
+}
+
+/* Write css from here */
+
+/* -------------------Write here style just for global use ------------------- */
+
+/* This style is applyed to all icons*/
+.icon-styles {
+    @apply text-primary_700 dark:text-primary;
+    vertical-align: middle;
+}
+
+/* Target all component */
+.header-container,
+.container,
+.footer-container {
+    /* border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: black; */
+}
+
+/* Body */
+.body {
+    font-family: var(--primary_font);
+}
+
+.body-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Header Component*/
+.header-component {
+    position: fixed !important;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    padding-left: var(--left-right-pading);
+    padding-right: var(--left-right-pading);
+}
+
+/* Header Container */
+.header-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    margin-top: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+/* Header left grid */
+.header-left-grid {
+    position: relative;
+}
+
+.logo-caintainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    top: 50%;
+    transform: translate(-0%, -50%);
+}
+
+.gogomet-icon {
+    border-radius: 6px;
+}
+
+.header-gogomet-label {
+    margin-left: 4px;
+    font-size: 8rem;
+    font-family: var(--gogomet-font);
+    @apply text-primary_700 dark:text-primary;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-0%, -40%);
+}
+
+/* Header right grid */
+.header-right-grid {
+    position: relative;
+
+}
+
+.header-menu-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.dark-light-mode-toggle {
+    font-size: 3.5rem;
+    @apply text-gray-500 transition duration-150 ease-in-out bg-gray-100 border border-transparent rounded-md lg:bg-primary_200 lg:dark:bg-gray-900 dark:text-gray-200 dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-700 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50;
+    width: 35px;
+    height: 35px;
+}
+
+.select-language-button,
+.login-button {
+    margin-left: 18px;
+}
+
+.select-language-button {
+    font-size: 3.5rem;
+    font-family: (--primary_font);
+    font-style: normal;
+    font-weight: 600;
+    @apply text-primary_800 dark:text-primary;
+    border-style: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.select-language-button-icon {
+    margin-right: 4px;
+}
+
+.login-button {
+    font-size: 3rem;
+    width: 80px;
+    height: 35px;
+    border-style: none;
+    border-radius: var(--button-radius);
+    background-color: var(--primary_color);
+    box-shadow: var(--shadow_200);
+    font-family: var(--primary_font);
+    font-style: normal;
+    font-weight: 900;
+    @apply text-secondary_900 bg-primary active:bg-secondary_50;
+}
+
+.user-icon {
+    @apply text-primary_700;
+    vertical-align: middle;
+    margin-bottom: 1px;
+    margin-left: 4px;
+
+}
+
+/* Main Component */
+.main-component {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 400px;
+    padding-left: var(--main-component-padding);
+    padding-right: var(--main-component-padding);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.left-main-container-grid {}
+
+.call-to-action-line {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16rem;
+    display: flex;
+    align-items: center;
+    @apply text-primary_700 dark:text-primary;
+}
+
+.left-main-container-grid>h5,
+.right-main-container-grid>h5 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.5rem;
+    @apply text-primary_600 dark:text-primary;
+    margin-bottom: 8px;
+}
+
+.get-early-access-caintainer {
+    position: absolute;
+    z-index: 100%;
+    margin-top: 24px;
+}
+
+.get-early-access-button {
+    width: 200px;
+    height: 45px;
+    border-style: none;
+    border-radius: var(--button-radius);
+    @apply text-secondary_900 bg-primary active:bg-secondary_50;
+    box-shadow: var(--shadow_200);
+    font-family: var(--primary_font);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+
+}
+
+.get-the-link-container {
+    margin-top: 10px;
+}
+
+.get-the-link-container {}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.number-input-box-to-get-download-caintainer {
+    display: flex;
+    align-items: center;
+}
+
+.country-picker {
+    position: relative;
+    width: 70px;
+    height: 35px;
+    background: var(--primary_color);
+    box-shadow: var(--shadow_200);
+    border-radius: var(--button-radius);
+    margin-right: 12px;
+
+
+}
+
+.country-picker-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.country-picker-indicator>img {
+    margin-right: 1px;
+
+}
+
+.country-picker-indicator>p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3.2rem;
+    /* primary_color_800 */
+    color: var(--primary_color_800);
+
+}
+
+.number-input-box {
+    width: 120px;
+    height: 35px;
+    border-radius: var(--button-radius);
+    background-color: var(--primary_color);
+    box-shadow: var(--shadow_200);
+}
+
+.get-link-btn {
+    width: 100px;
+    height: 40px;
+    @apply text-primary bg-primary_800 active:bg-primary_900;
+    border-radius: var(--button-radius);
+    border-style: none;
+    font-family: var(--primary_font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+.left-main-container-grid {}
+
+/* All product showcase images */
+.img-mockup-1,
+/* .img-mockup-2, */
+/* .img-mockup-3, */
+/* .img-mockup-4, */
+.img-mockup-5,
+.img-mockup-6 {
+    width: auto;
+    height: 500px;
+}
+
+.img-mockup-1 {
+    position: fixed;
+    top: 50%;
+    left: 38%;
+    transform: translate(-0%, -60%);
+}
+
+.img-mockup-2 {
+    width: auto;
+    height: 500px;
+    position: fixed;
+    top: 50%;
+    right: 43%;
+    transform: translate(-0%, -52%);
+}
+
+.img-mockup-3 {
+    width: auto;
+    height: 600px;
+    position: fixed;
+    top: 50%;
+    left: 47%;
+    transform: translate(-0%, -71%);
+}
+
+.img-mockup-4 {
+    width: auto;
+    height: 580px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translate(-2%, -72%);
+}
+
+.img-mockup-5 {
+    position: fixed;
+    top: 50%;
+    transform: translate(-3%, -50%);
+}
+
+.img-mockup-6 {
+    position: fixed;
+    top: 50%;
+    left: 23%;
+    transform: translate(-0%, -57%);
+}
+
+
+/* Footer Component*/
+.footer-component {
+    position: fixed !important;
+    z-index: 100;
+    bottom: 0;
+    width: 100%;
+    padding-left: var(--left-right-pading);
+    padding-right: var(--left-right-pading);
+    /* primary_color_400 */
+    background: var(--primary_color_400);
+    @apply bg-primary_400 dark:bg-primary_dark_900 rounded-t-lg;
+
+}
+
+.footer-parent {
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.footer-container {}
+
+/* Footer */
+.footer-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+/* Footer left grid */
+.footer-left-grid {}
+
+.call-to-download-opations {
+    display: flex;
+}
+
+.gogomet-label {
+    font-family: var(--gogomet-font);
+    font-size: 5.2rem;
+    /* primary_color_800 */
+    @apply text-primary_800 dark:text-primary;
+
+}
+
+.store-download-badges {
+    display: flex;
+    align-items: center;
+}
+
+.store-download-badges-logo {
+    width: 100px;
+    height: auto;
+    box-shadow: var(--shadow_400);
+}
+
+.googleplay-badge {
+    margin-right: 4px;
+}
+
+#appstore {
+    width: 100px;
+}
+
+.store-download-container {}
+
+.qrcode-container {
+    margin-left: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.qrcode-container>h6 {
+    font-family: var(--primary_font);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4rem;
+    /* primary_color_800 */
+    color: var(--primary_color_800);
+    @apply text-primary_800 dark:text-primary_100;
+}
+
+.qr-code-symbol {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Footer right grid */
+.footer-right-grid {
+    position: relative;
+}
+
+.footer-bottom-container {
+    font-size: 4rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.footer-menu-parent-caintainer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+
+.right-footer-bottom-container-menu {
+    display: flex;
+    align-items: center;
+}
+
+.category-footer-label {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2rem;
+    /* primary_color_800 */
+    @apply text-primary_800 dark:text-primary_100;
+
+}
+
+.footer-menu-col-1 {
+    margin-right: 35px;
+}
+
+.footer-menu-col-2 {
+    margin-right: 35px;
+}
+
+.footer-menu-col-3 {}
+
+.navigation-menu {
+    display: flex;
+    align-items: center;
+}
+
+.item-container {
+    margin-right: 10px;
+}
+
+
+.navigation-menu-style>ul {
+    list-style-type: none;
+    font-family: var(--primary_font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.9rem;
+    /* primary_color_700 */
+    @apply text-primary_700 dark:text-primary_100;
+
+}
+
+.bottom-divider {
+    width: 100%;
+    /* primary_color_900 */
+    /* background: var(--primary_color_900); */
+    @apply text-primary_700 dark:text-primary_100;
+    border-radius: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.footer-bottom-container {
+    font-size: 4rem;
+}
+
+.left-footer-bottom-container-grid {
+    display: flex;
+    align-items: center;
+}
+
+
+.center-footer-bottom-container-grid {
+    position: relative;
+}
+
+.copywrite-caintainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copywrite-year {
+    font-family: var(--primary_font);
+    font-style: normal;
+    font-weight: 800;
+    /* primary_color_800 */
+    @apply text-primary_800 dark:text-primary_100;
+}
+
+.fa-copyright {
+    @apply text-primary_800 dark:text-primary_100;
+    vertical-align: middle;
+
+}
+
+/* max-width:1281px */
+.footer-bottom-g-intention-logo-max-width-1281px {}
+
+/* max-width:1025px */
+.footer-bottom-g-intention-logo-max-width-1025px {
+    display: none;
+}
+
+
+/* max-width:961px */
+.footer-bottom-g-intention-logo-max-width-961px {
+    display: none;
+}
+
+
+/* max-width:641px */
+.footer-bottom-g-intention-logo-max-width-641px {
+    display: none;
+}
+
+
+/* max-width:481px */
+.footer-bottom-g-intention-logo-max-width-481px {
+    display: none;
+}
+
+
+/* max-width:320px */
+.footer-bottom-g-intention-logo-max-width-320px {
+    display: none;
+}
+
+
+.right-footer-bottom-container-grid {
+    position: relative;
+}
+
+.right-footer-bottom-container-menu {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-0%, -50%);
+
+}
+
+.right-footer-bottom-container-menu>p {
+    font-family: var(--primary_font);
+    font-style: normal;
+    font-weight: bold;
+    font-weight: 600;
+    /* primary_color_800 */
+    @apply text-primary_800 dark:text-primary_100;
+
+}
+
+.privacy_margin {
+    margin-right: 24px;
+}
+
+.social-brand-icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.social-brand-icon {
+    @apply text-primary_800 dark:text-primary_100;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+/* ----------------------------------- */
+.swiper {
+    width: 100vw;
+    height: 100vh;
+}
+
+.slide-1 {
+    @apply bg-primary_200 dark:bg-slide_1 bg-cover bg-no-repeat bg-center;
+}
+
+.slide-2 {
+    @apply bg-primary_200 dark:bg-slide_2 bg-cover bg-no-repeat bg-center;
+}
+
+.slide-3 {
+    @apply bg-primary_200 dark:bg-slide_3 bg-cover bg-no-repeat bg-center;
+}
+
+.slide-4 {
+    @apply bg-primary_200 dark:bg-slide_4 bg-cover bg-no-repeat bg-center;
+}
+
+.slide-5 {
+    @apply bg-primary_200 dark:bg-slide_5 bg-cover bg-no-repeat bg-center;
+}
+
+.slide-6 {
+    @apply bg-primary_200 dark:bg-slide_6 bg-cover bg-no-repeat bg-center;
+}
+
+/*active pagination*/
+.swiper-pagination .swiper-pagination-bullet-active {
+    color: var(--secondary_color_500);
+    background-color: var(--secondary_color_500);
+}
+/* -------------This is global responsive design------------- */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    /* Styles */
+
+    /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+    .product-mockup-container {
+        display: none;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 4px;
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        transform: translate(-0%);
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+
+
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+    /* Styles */
+     /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+    .product-mockup-container {
+        display: none;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 4px;
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        transform: translate(-0%);
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+    /* Styles */
+     /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+    .product-mockup-container {
+        display: none;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 4px;
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        transform: translate(-0%);
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+
+
+}
+
+@media only screen and (min-width: 481px) {
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .qrcode-container {
+    margin-left: 8px;
+}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Styles */
+    /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 24px;
+    }
+
+    .product-mockup-container {
+        display: unset;
+    }
+
+
+    /* All product showcase images */
+    .img-mockup-1 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        left: 26%;
+        transform: translate(-0%, -60%);
+    }
+
+    .img-mockup-2 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        right: 43%;
+        transform: translate(-0%, -52%);
+    }
+
+    .img-mockup-3 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        left: 38.5%;
+        transform: translate(-0%, -71%);
+    }
+
+    .img-mockup-4 {
+        width: auto;
+        height: 340px;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translate(-4%, -72%);
+    }
+
+    .img-mockup-5 {
+        height: 380px;
+        position: fixed;
+        top: 50%;
+        transform: translate(-3%, -50%);
+    }
+
+    .img-mockup-6 {
+        height: 380px;
+        position: fixed;
+        top: 50%;
+        left: 15%;
+        transform: translate(-0%, -57%);
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+
+
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* Styles */
+      /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 24px;
+    }
+
+    .product-mockup-container {
+        display: unset;
+    }
+
+
+    /* All product showcase images */
+    .img-mockup-1 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        left: 26%;
+        transform: translate(-0%, -60%);
+    }
+
+    .img-mockup-2 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        right: 43%;
+        transform: translate(-0%, -52%);
+    }
+
+    .img-mockup-3 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        left: 38.5%;
+        transform: translate(-0%, -71%);
+    }
+
+    .img-mockup-4 {
+        width: auto;
+        height: 340px;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translate(-4%, -72%);
+    }
+
+    .img-mockup-5 {
+        height: 380px;
+        position: fixed;
+        top: 50%;
+        transform: translate(-3%, -50%);
+    }
+
+    .img-mockup-6 {
+        height: 380px;
+        position: fixed;
+        top: 50%;
+        left: 15%;
+        transform: translate(-0%, -57%);
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    /* Styles */
+      /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 24px;
+    }
+
+    .product-mockup-container {
+        display: unset;
+    }
+
+
+    /* All product showcase images */
+    .img-mockup-1 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        left: 26%;
+        transform: translate(-0%, -60%);
+    }
+
+    .img-mockup-2 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        right: 43%;
+        transform: translate(-0%, -52%);
+    }
+
+    .img-mockup-3 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        left: 38.5%;
+        transform: translate(-0%, -71%);
+    }
+
+    .img-mockup-4 {
+        width: auto;
+        height: 340px;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translate(-4%, -72%);
+    }
+
+    .img-mockup-5 {
+        height: 380px;
+        position: fixed;
+        top: 50%;
+        transform: translate(-3%, -50%);
+    }
+
+    .img-mockup-6 {
+        height: 380px;
+        position: fixed;
+        top: 50%;
+        left: 15%;
+        transform: translate(-0%, -57%);
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+}
+
+/* iPad 3 (landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-pixel-ratio: 2) {
+    /* Styles */
+      /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 24px;
+    }
+
+    .product-mockup-container {
+        display: unset;
+    }
+
+
+    /* All product showcase images */
+    .img-mockup-1 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        left: 26%;
+        transform: translate(-0%, -60%);
+    }
+
+    .img-mockup-2 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        right: 43%;
+        transform: translate(-0%, -52%);
+    }
+
+    .img-mockup-3 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        left: 38.5%;
+        transform: translate(-0%, -71%);
+    }
+
+    .img-mockup-4 {
+        width: auto;
+        height: 340px;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translate(-4%, -72%);
+    }
+
+    .img-mockup-5 {
+        height: 380px;
+        position: fixed;
+        top: 50%;
+        transform: translate(-3%, -50%);
+    }
+
+    .img-mockup-6 {
+        height: 380px;
+        position: fixed;
+        top: 50%;
+        left: 15%;
+        transform: translate(-0%, -57%);
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+}
+
+/* iPad 3 (portrait) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-pixel-ratio: 2) {
+    /* Styles */
+      /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 24px;
+    }
+
+    .product-mockup-container {
+        display: unset;
+    }
+
+
+    /* All product showcase images */
+    .img-mockup-1 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        left: 26%;
+        transform: translate(-0%, -60%);
+    }
+
+    .img-mockup-2 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        right: 43%;
+        transform: translate(-0%, -52%);
+    }
+
+    .img-mockup-3 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        left: 38.5%;
+        transform: translate(-0%, -71%);
+    }
+
+    .img-mockup-4 {
+        width: auto;
+        height: 340px;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translate(-4%, -72%);
+    }
+
+    .img-mockup-5 {
+        height: 380px;
+        position: fixed;
+        top: 50%;
+        transform: translate(-3%, -50%);
+    }
+
+    .img-mockup-6 {
+        height: 380px;
+        position: fixed;
+        top: 50%;
+        left: 15%;
+        transform: translate(-0%, -57%);
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+
+    /* Styles */
+    /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading);
+        padding-right: var(--left-right-pading);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 35px;
+        height: 35px;
+    }
+
+    .gogomet-icon {
+        border-radius: 6px;
+    }
+
+    .header-gogomet-label {
+        font-size: 8rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3.5rem;
+        width: 35px;
+        height: 35px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 12px;
+    }
+
+    .select-language-button {
+        font-size: 3.5rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding);
+        padding-right: var(--main-component-padding);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 24px;
+    }
+
+    .product-mockup-container {
+        display: unset;
+    }
+
+
+    /* All product showcase images */
+
+    .img-mockup-1 {
+        width: auto;
+        height: 420px;
+        position: fixed;
+        top: 50%;
+        left: 44%;
+        transform: translate(-0%, -60%);
+    }
+
+    .img-mockup-2 {
+        width: auto;
+        height: 450px;
+        position: fixed;
+        top: 50%;
+        right: 45%;
+        transform: translate(-0%, -54%);
+    }
+
+    .img-mockup-3 {
+        width: auto;
+        height: 480px;
+        position: fixed;
+        top: 50%;
+        left: 46%;
+        transform: translate(-0%, -71%);
+    }
+
+    .img-mockup-4 {
+        width: auto;
+        height: 520px;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translate(-3%, -72%);
+    }
+
+    .img-mockup-5 {
+        width: auto;
+        height: 400px;
+        position: fixed;
+        top: 50%;
+        transform: translate(-3%, -50%);
+    }
+
+    .img-mockup-6 {
+        width: auto;
+        height: 380px;
+        position: fixed;
+        top: 50%;
+        left: 25%;
+        transform: translate(-0%, -57%);
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading);
+        padding-right: var(--left-right-pading);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+}
+
+/* Medium Desktops and laptops --------------- */
+@media only screen and (min-width: 1300px) {
+
+    /* Styles */
+    /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-for-media-desktop);
+        padding-right: var(--left-right-pading-for-media-desktop);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 35px;
+        height: 35px;
+    }
+
+    .gogomet-icon {
+        border-radius: 6px;
+    }
+
+    .header-gogomet-label {
+        font-size: 8rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3.5rem;
+        width: 35px;
+        height: 35px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 12px;
+    }
+
+    .select-language-button {
+        font-size: 3.5rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-for-media-desktop);
+        padding-right: var(--main-component-padding-for-media-desktop);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 16rem;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3.5rem;
+        margin-bottom: 4px;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 24px;
+    }
+
+    .product-mockup-container {
+        display: unset;
+    }
+
+
+
+    /* All product showcase images */
+    .img-mockup-1,
+    /* .img-mockup-2, */
+    /* .img-mockup-3, */
+    /* .img-mockup-4, */
+    .img-mockup-5,
+    .img-mockup-6 {
+        width: auto;
+        height: 500px;
+    }
+
+    .img-mockup-1 {
+        position: fixed;
+        top: 50%;
+        left: 40%;
+        transform: translate(-0%, -60%);
+    }
+
+    .img-mockup-2 {
+        width: auto;
+        height: 550px;
+        position: fixed;
+        top: 50%;
+        right: 43%;
+        transform: translate(-0%, -52%);
+    }
+
+    .img-mockup-3 {
+        width: auto;
+        height: 600px;
+        position: fixed;
+        top: 50%;
+        left: 47%;
+        transform: translate(-0%, -71%);
+    }
+
+    .img-mockup-4 {
+        width: auto;
+        height: 580px;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translate(-2%, -72%);
+    }
+
+    .img-mockup-5 {
+        position: fixed;
+        top: 50%;
+        transform: translate(-3%, -50%);
+    }
+
+    .img-mockup-6 {
+        position: fixed;
+        top: 50%;
+        left: 24%;
+        transform: translate(-0%, -57%);
+    }
+
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-for-media-desktop);
+        padding-right: var(--left-right-pading-for-media-desktop);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 5.2rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 100px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 100px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 40px;
+        height: auto;
+        position: relative;
+        margin-top: 4px;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%)
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 3.2rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 35px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 35px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 10px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.9rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+    /* Styles */
+    /* This work has been assigned to update versions */
+}
+
+/* iPhone 4 (landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) and (-webkit-min-pixel-ratio: 2) {
+    /* Styles */
+     /* Styles */
+
+    /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+    .product-mockup-container {
+        display: none;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 4px;
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        transform: translate(-0%);
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+
+
+}
+
+/* iPhone 4 (portrait) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) and (-webkit-min-pixel-ratio: 2) {
+    /* Styles */
+      /* Styles */
+
+    /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+    .product-mockup-container {
+        display: none;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 4px;
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        transform: translate(-0%);
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+
+}
+
+/* iPhone 5 (landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: landscape) and (-webkit-pixel-ratio: 2) {
+    /* Styles */
+
+        .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+}
+
+/* iPhone 5 (portrait) ----------- */
+@media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: portrait) and (-webkit-pixel-ratio: 2) {
+    /* Styles */
+      /* Styles */
+
+    /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+    .product-mockup-container {
+        display: none;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 4px;
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        transform: translate(-0%);
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+
+
+}
+
+/* iPhone 6 (landscape) ----------- */
+@media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: landscape) and (-webkit-pixel-ratio: 2) {
+    /* Styles */
+     
+       .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+}
+
+/* iPhone 6 (portrait) ----------- */
+@media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: portrait) and (-webkit-pixel-ratio: 2) {
+    /* Styles */
+      /* Styles */
+
+    /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+    .product-mockup-container {
+        display: none;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 4px;
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        transform: translate(-0%);
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+
+}
+
+/* iPhone 6+ (landscape) ----------- */
+@media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: landscape) and (-webkit-pixel-ratio: 2) {
+    /* Styles */
+     .call-to-action-line{
+        margin-top: var(--call-to-action-line-margin-top);
+    }
+        .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+}
+
+/* iPhone 6+ (portrait) ----------- */
+@media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: portrait) and (-webkit-pixel-ratio: 2) {
+    /* Styles */
+      /* Styles */
+
+    /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+    .product-mockup-container {
+        display: none;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 4px;
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        transform: translate(-0%);
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+
+}
+
+/* Samsung Galaxy S3 (landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-pixel-ratio: 2) {
+    /* Styles */
+
+     .call-to-action-line{
+        margin-top: var(--call-to-action-line-margin-top);
+    }
+       .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+}
+
+/* Samsung Galaxy S3 (portrait) ----------- */
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-pixel-ratio: 2) {
+    /* Styles */
+      /* Styles */
+
+    /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+    .product-mockup-container {
+        display: none;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 4px;
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        transform: translate(-0%);
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+
+}
+
+/* Samsung Galaxy S4 (landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-pixel-ratio: 3) {
+    /* Styles */
+
+     .call-to-action-line{
+        margin-top: var(--call-to-action-line-margin-top);
+    }
+        .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+}
+
+/* Samsung Galaxy S4 (portrait) ----------- */
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-pixel-ratio: 3) {
+    /* Styles */
+      /* Styles */
+
+    /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+    .product-mockup-container {
+        display: none;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 4px;
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        transform: translate(-0%);
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+
+}
+
+/* Samsung Galaxy S5 (landscape) ----------- */
+@media only screen and (min-width: 360px) and (max-height: 640px) and (orientation: landscape) and (-webkit-pixel-ratio: 3) {
+    /* Styles */
+
+     .call-to-action-line{
+        margin-top: var(--call-to-action-line-margin-top);
+    }
+        .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+}
+
+/* Samsung Galaxy S5 (portrait) ----------- */
+@media only screen and (min-width: 360px) and (max-height: 640px) and (orientation: portrait) and (-webkit-pixel-ratio: 3) {
+    /* Styles */
+      /* Styles */
+
+    /* Header Component*/
+    .header-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+    }
+
+    .gogomet-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .gogomet-icon {
+        border-radius: 4px;
+    }
+
+    .header-gogomet-label {
+        font-size: 4.5rem;
+    }
+
+    .dark-light-mode-toggle {
+        font-size: 3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    .select-language-button,
+    .login-button {
+        margin-left: 6px;
+    }
+
+    .select-language-button {
+        font-size: 3rem;
+    }
+
+    .select-language-button-icon {
+        margin-right: 4px;
+    }
+
+    .login-button {
+        font-size: 3rem;
+        width: 80px;
+        height: 35px;
+    }
+
+    /* Main Component */
+    .main-component {
+        padding-left: var(--main-component-padding-dedicated-for-mobile);
+        padding-right: var(--main-component-padding-dedicated-for-mobile);
+    }
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .left-main-container-grid {}
+
+    .call-to-action-line {
+        font-size: 10rem;
+        display: flex;
+    }
+
+    .left-main-container-grid>h5,
+    .right-main-container-grid>h5 {
+        font-size: 3rem;
+        margin-bottom: 4px;
+    }
+
+    .product-mockup-container {
+        display: none;
+    }
+
+
+    .get-early-access-caintainer {
+        margin-top: 4px;
+    }
+
+
+    /* Footer Component*/
+    .footer-component {
+        padding-left: var(--left-right-pading-dedicated-for-mobile);
+        padding-right: var(--left-right-pading-dedicated-for-mobile);
+
+    }
+
+    .footer-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+
+
+
+    /* Footer left grid */
+    .footer-left-grid {}
+
+    .call-to-download-opations {
+        display: flex;
+    }
+
+    .gogomet-label {
+        font-size: 4rem;
+
+    }
+
+    .store-download-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .store-download-badges-logo {
+        width: 70px;
+        height: auto;
+        box-shadow: var(--shadow_400);
+    }
+
+    .googleplay-badge {
+        margin-right: 4px;
+    }
+
+    #appstore {
+        width: 70px;
+    }
+
+    .store-download-container {}
+
+    .qrcode-container {
+        margin-left: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .qrcode-container>h6 {
+        font-size: 3rem;
+    }
+
+    .qr-code-symbol {
+        width: 28px;
+        height: auto;
+        position: relative;
+    }
+
+    /* Footer right grid */
+    .footer-right-grid {
+        position: relative;
+    }
+
+    .footer-menu-parent-caintainer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        transform: translate(-0%);
+    }
+
+
+    .right-footer-bottom-container-menu {
+        width: auto;
+        display: flex;
+        align-items: end;
+    }
+
+    .category-footer-label {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-menu-col-1 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-2 {
+        margin-right: 8px;
+    }
+
+    .footer-menu-col-3 {}
+
+    .navigation-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .item-container {
+        margin-right: 6px;
+    }
+
+
+    .navigation-menu-style>ul {
+        font-size: 2.5rem;
+
+    }
+
+    .footer-bottom-container {
+        font-size: 2.7rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .copywrite-caintainer {
+        align-items: baseline;
+    }
+
+    .copywrite-caintainer>p {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .fa-copyright {
+        height: 9px;
+    }
+
+    .gintention-logo {
+        width: 57.4px;
+    }
+
+    .privacy_margin {
+        margin-right: 10px;
+    }
+
+}
+
+/* -------------------END HERE--------------------- */

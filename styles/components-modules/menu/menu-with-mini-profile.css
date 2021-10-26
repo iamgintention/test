@@ -1,0 +1,284 @@
+.action {
+    z-index: 100;
+    position: relative;
+}
+
+
+.profile {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile>div{
+    position: relative;
+
+}
+
+.user-activate-indicator {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    border-radius: 50%;
+    background-color: var(--green-active-color);
+    border: 1px solid var(--primary_color);
+
+}
+
+.profile>div>img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--secondary_color_900);
+}
+
+
+.action .global-nav-menu {
+    position: absolute;
+    z-index: 100;
+    top: 120px;
+    right: -20px;
+    @apply bg-primary dark:bg-primary_dark_700 rounded-lg;
+    width: 200px;
+    box-sizing: 0 5px 25px rgba(0, 0, 0, 0, 1.);
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.action .global-nav-menu.active {
+    top: 60px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.action .global-nav-menu::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    @apply bg-primary dark:bg-primary_dark_700 rounded-sm;
+    transform: rotate(45deg);
+
+}
+
+.dropdwon-global-header-menu {
+    width: 100%;
+    padding: 8px;
+}
+
+.global-nav-menu>hr {
+    @apply text-primary_400 dark:text-primary_400;
+}
+
+.dropdwon-global-header-menu>div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 400;
+    @apply text-primary_600 dark:text-primary_400;
+    cursor: pointer;
+}
+
+.dropdwon-global-header-menu-icon {
+    @apply text-primary_600 dark:text-primary_400;
+}
+
+.dropdwon-global-header-menu>div>h1 {
+    margin-left: 4px;
+}
+
+.dropdown-user-profile-caontainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.dropdown-user-profile-art-banner-caontainer {
+    background-image: var(--bg-gradient-overlay), url("https://source.unsplash.com/random");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    @apply rounded-lg;
+    position: relative;
+}
+
+.dropdown-user-profile-details-caontainer {
+    position: relative;
+    padding: 8px;
+    width: 100%;
+}
+
+.dropdown-user-profile-img-caontainer {
+    position: absolute;
+    top: -21%;
+}
+
+.dropdown-user-profile-img-caontainer>img {
+    width: 50px;
+    height: 50px;
+    @apply rounded-lg;
+    border: 1px solid var(--secondary_color_900);
+}
+
+.dropdown-user-profile-details-caontainer>div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dropdown-user-profile-details-caontainer>div>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dropdown-user-identity-caontainer {
+    margin-top: 18px;
+    position: relative;
+    font-size: 4rem;
+}
+
+.dropdown-user-identity-caontainer>div>h1 {
+    font-size: 4rem;
+    margin-right: 4px;
+    font-weight: 600;
+    @apply text-primary_800 dark:text-primary_100;
+}
+
+.dropdown-user-profile-verify-badge {
+    @apply text-secondary_900 dark:text-secondary_900;
+    font-size: 16px;
+}
+
+.dropdown-user-identity-caontainer>div>h2 {
+    font-size: 3.5rem;
+    margin-right: 4px;
+    font-weight: 600;
+    @apply text-primary_700 dark:text-primary_100;
+}
+
+.dropdown-user-identity-caontainer>div>h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-right: 4px;
+    @apply text-primary_800 dark:text-primary_100;
+}
+
+.dropdown-user-identity-caontainer>div>img {
+    width: 20px;
+    height: 20px;
+    @apply rounded-sm;
+}
+
+.dropdown-user-profile-orginization-container {
+    position: absolute;
+    right: 0;
+}
+
+.view-profile-btn {
+    width: 100%;
+    height: 35px;
+    font-size: 3rm;
+    margin-top: 8px;
+    font-weight: 600;
+    @apply bg-secondary_900 text-primary rounded-lg;
+}
+
+
+/* -------------This is global responsive design------------- */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+
+    /* Styles */
+    .profile>div>img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .user-activate-indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+
+    .action .global-nav-menu {
+        top: 52px;
+        left: -8px;
+    }
+
+    .action .global-nav-menu.active {
+        top: 52px;
+        left: -8px;
+    }
+
+    .action .global-nav-menu::before {
+        top: -5px;
+        left: 11px;
+        width: 20px;
+        height: 20px;
+
+    }
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 576px) and (max-width: 624px) {
+    /* Styles */
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 624px) and (max-width: 676px) {
+    /* Styles */
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 676px) and (max-width: 728px) {
+    /* Styles */
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 728px) and (max-width: 768px) {
+    /* Styles */
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 868px) {
+    /* Styles */
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 868px) and (max-width: 968px) {
+    /* Styles */
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 968px) and (max-width: 1068px) {
+    /* Styles */
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 1068px) and (max-width: 1168px) {
+    /* Styles */
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 1168px) and (max-width: 1224px) {
+    /* Styles */
+}
+
+/* -----------------------THE END HERE------------------------- */

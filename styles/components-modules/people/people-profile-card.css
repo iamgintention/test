@@ -1,0 +1,145 @@
+.people-profile-card-base {
+    height: 280px;
+    font-size: 4rem;
+    @apply bg-primary_200 dark:bg-primary_dark_700 rounded-lg;
+}
+
+.people-profile-details-base {
+    width: 100%;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url("https://source.unsplash.com/random");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @apply rounded-lg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.people-profile-img-container {
+    position: relative;
+}
+
+#people-profile-activate-indicator {
+    width: 12px;
+    height: 12px;
+    background-color: var(--green-active-color);
+    border: 1px solid var(--primary_color);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    right: 40px;
+}
+
+.people-profile-details-base>div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.people-profile-details-base>div>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @apply text-primary;
+}
+
+.people-profile-details-base>div>div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @apply text-primary;
+}
+
+.people-profile-organization-container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+   
+}
+
+
+
+.people-profile-details-base>div>div>h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    @apply text-primary;
+}
+
+.people-profile-details-base>div>div>h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    @apply text-primary;
+}
+
+.people-profile-organization-container>h4 {
+    font-size: 1.9rem;
+    font-weight: bold;
+    @apply text-primary;
+}
+
+.people-profile-organization-container>img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-bottom: 4px;
+}
+
+
+
+.people-profile-user-distence-activate-info-btn-container {
+    width: 100%;
+    padding: 8px;
+}
+
+.people-profile-user-distence-activate-info-btn-container>div {
+    width: 100%;
+    position: relative;
+}
+
+.people-profile-user-distence-activate-info-btn-container>div>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.people-profile-user-distence-activate-info-btn-container>div>div>h1,
+.people-profile-user-distence-activate-info-btn-container>div>div>h1>span {
+    font-size: 2.8rem;
+    font-weight: 600;
+    @apply text-primary_800 dark:text-primary_100;
+}
+
+.people-profile-distence-container {
+    position: absolute;
+    right: 0;
+}
+
+.people-profile-distence-container>h1 {
+    margin-right: 8px;
+}
+
+
+.people-profile-user-distence-activate-info-btn-container>button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35px;
+    background-color: var(--secondary_color_900);
+    @apply text-primary rounded-lg;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-top: 40px;
+
+}
+
+.people-profile-user-distence-activate-info-btn-container>button>h1 {
+    margin-left: 4px;
+
+}

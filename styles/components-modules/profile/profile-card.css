@@ -1,0 +1,293 @@
+.profile-card-base-play-ground {
+    width: 100%;
+    height: 100%;
+    @apply bg-primary_100 dark:bg-primary_dark_800 rounded-lg drop-shadow-xl;
+}
+
+.profile-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.profile-banner-art-container,
+.user-primary-info-container {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+
+}
+
+.profile-banner-art-container {
+    background-image: var(--bg-gradient-overlay), url("https://source.unsplash.com/random");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    @apply rounded-lg;
+    position: relative;
+    font-size: 5rem;
+}
+
+.banner-art-edit {
+    position: relative;
+    position: absolute;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    font-size: 3rem;
+    border-radius: 50%;
+    @apply bg-primary;
+
+
+}
+
+.banner-art-edit-icon{
+    @apply text-secondary_900 dark:text-secondary_900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.user-primary-info-container {
+    position: relative;
+}
+
+
+.user-primary-img-container {
+    position: relative;
+    position: absolute;
+    top: -50px;
+
+}
+
+.user-primary-img-container>img {
+    @apply rounded-lg;
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--secondary_color_900);
+}
+
+.user-primary-img-container>div {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    background-color: var(--green-active-color);
+    border-radius: 50%;
+    border: 1px solid var(--primary_color);
+    bottom: 15px;
+    right: -5px;
+}
+
+.profile-edit-button {
+    font-size: 4rem;
+    @apply text-primary_800 dark:text-primary_100;
+}
+
+.user-info-container {
+    margin-top: 50px;
+    position: relative;
+}
+
+.user-info-container>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 600;
+    font-style: normal;
+    @apply text-primary_800 dark:text-primary_100;
+}
+
+.user-name-and-verified-badeg>h1{
+    margin-right: 6px;
+}
+
+.user-adress-contact-info>h1, h2,span,
+.user-follower-handshaker>h1, h2{
+    font-weight: 500;  
+    margin-right: 4px;
+}
+
+
+.user-adress-contact-info>h2,
+.user-follower-handshaker>h2{
+    margin-left: 4px;
+}
+
+.user-adress-contact-info>h2{
+    color: var(--blue-color);
+}
+
+.user-varified-badeg{
+     @apply text-secondary_900 dark:text-secondary_900;
+     font-size: 18px;
+}
+
+.occupation-organization-brand-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.occupation-organization-brand-container>img {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.occupation-organization-brand-container>h1 {
+    margin-left: 4px;
+    font-size: 4rem;
+    font-weight: 600;
+    @apply text-primary_800 dark:text-primary_100;
+
+}
+
+.profile-dashboard-container {
+    width: 100%;
+    padding: 8px;
+}
+
+.profile-dashboard-container>div {
+    width: 100%;
+    @apply bg-primary_400 dark:bg-primary_dark_700 rounded-lg;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 15px;
+    font-size: 4rem;
+    margin-top: 10px;
+}
+
+.profile-dashboard-container>div>h1{
+    font-size: 3.5rem;
+    font-weight: 600;
+    @apply text-primary_800 dark:text-primary;
+
+}
+
+.about-user-container>h5 {
+    margin-top: 5px;
+    font-size: 3rem;
+    font-weight: 500;
+    @apply text-primary_800 dark:text-primary_100;
+}
+.about-user-container>h5>span {
+    @apply text-primary_600 dark:text-primary_600;
+    margin-left: 5px;
+}
+
+
+.engagement-card>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.engagement-card>div>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.engagement-card>div>div>h5 {
+   @apply text-primary_800 dark:text-primary_100;
+   font-size: 3rem;
+   font-weight: 600;
+}
+.engagement-card>div>div>h1 {
+    @apply text-primary_600 dark:text-primary_400;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.engagement-content-divider {
+    width: 1px;
+    height: 40px;
+    background-color: red;
+    @apply rounded-lg;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.content-overview-card {
+    position: relative;
+}
+
+.content-overview-card-tap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.add-content-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 5rem;
+    @apply text-primary_800 dark:text-primary_100;
+}
+
+.content-overview-card-tap>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabs-btn-container>h5{
+     @apply text-primary_600 dark:text-primary_400;
+     font-weight: 500;
+}
+
+#tabs-btn-highlight-label-active{
+     @apply text-primary_800 dark:text-primary;
+     font-weight: 600;
+}
+
+.content-overview-card-tap>div>div {
+    width: 100%;
+    height: 1px;
+    @apply bg-primary_500 dark:bg-primary_800;
+}
+
+#tabs-btn-highlight-line-active{
+    width: 100%;
+    height: 1px;
+    @apply bg-primary_800 dark:bg-primary;
+}
+
+
+.activities-overview-container,
+.content-overview-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.activities-overview-container>hr,
+.content-overview-container>hr{
+    width: 70%;
+    height: 1px;
+   @apply text-primary_500 dark:text-primary_800 rounded-md;
+}
+
+.activities-overview-container>h4,
+.content-overview-container>h4{
+    font-weight: bold;
+    font-size: 3.5rem;
+    @apply text-secondary_900 dark:text-secondary_900;
+}

@@ -1,0 +1,275 @@
+/* /* /* Here write css for index page
+/* Import CSS */
+@import "../../globals";
+@import "../../material/hold-style-material";
+
+/* Root */
+:root {
+    /* --------------Main components elements of sign up and sign in entirely pages----------- */
+    /* Define sign up card width/height */
+    --sign-up-card-width-for-desktop-tab: 300px;
+    --sign-up-card-width-for-mobile: 250px;
+    /* Define field box margin */
+    --input-field-box-margin: 10px;
+    /* Define input field box*/
+    --input-field-box-height: 52px;
+    --input-field-box-height-for-mobile: 45px;
+}
+
+/* ----------This style to content all properties of sign up and sign in entirely pages --------- */
+.main-caintainer-to-sign-up-sign-in-proces {
+    position: absolute;
+    width: var(--sign-up-card-width-for-desktop-tab);
+    @apply bg-primary_400 rounded-lg dark:bg-primary_dark_800;
+    padding: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: var(--shadow_400);
+}
+.elements-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.content-label{
+    font-family: var(--primary_font);
+    font-weight: 900;
+    font-style: bold;
+    font-size: 6rem;
+    @apply text-primary_800 dark:text-primary_100;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.input-field-container {
+    font-size: 3.5rem;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 24px;
+    @apply flex-col;
+}
+.input-field-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: var(--input-field-box-height); 
+    @apply bg-primary_200 rounded-lg dark:bg-primary_dark_700;
+    padding: 2rem;
+    box-shadow: var(--shadow_400);
+}
+
+.input-icon{
+    @apply text-primary_600 dark:text-primary_400;
+}
+.input-field-box-margin {
+    margin-bottom: var(--input-field-box-margin);
+}
+
+.input-field-box>input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin-left: 6px;
+    @apply bg-transparent;
+    
+}
+::placeholder {
+    font-family: var(--primary_font);
+    font-weight: 600;
+    font-style: bold;
+    @apply text-primary_600 dark:text-primary_100;
+}
+
+.primary-button{
+    width: 100%;
+    height: 55px;
+    font-family: var(--primary_font);
+    font-weight: 900;
+    font-style: bold;
+    font-size: 4rem;
+    @apply bg-primary text-secondary_900 rounded-lg;
+    text-transform: uppercase;
+}
+.basic-terms {
+    font-family: var(--primary_font);
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-style: bold;
+    margin-bottom: 15px;
+    @apply text-primary_700 dark:text-primary_100;
+    margin-top: 18px;
+}
+
+.divider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    direction: row;
+    margin-bottom: 15px;
+}
+
+.divider>p {
+    font-family: var(--primary_font);
+    font-size: 11px;
+    font-weight: 900;
+    font-style: bold;
+    margin-left: 4px;
+    margin-right: 4px;
+    @apply text-primary_700 dark:text-primary_100;
+}
+
+.divider>hr{
+    width: 100%;
+    height: 1px;
+    @apply text-primary_700 dark:text-primary_100 rounded-lg;
+
+}
+
+.third-party-primary-button-container{
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    direction: row;
+    justify-content: center;
+}
+
+.third-party-sign-up-sign-in-btn{
+    width: 50px;
+    height: 50px;
+    @apply bg-primary dark:bg-primary_dark_700 text-primary_800 dark:text-primary rounded-lg;
+}
+
+.google{
+    margin-right: 8px;
+}
+.third-party-brand-icons{
+     @apply text-primary_800;
+     font-size: 4rem;
+}
+
+/* -----------------------------THE END------------------------------ */
+
+/* SIGN IN STYLES */
+.forget-password {
+    font-size: 3.5rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-family: var(--primary_font);
+    @apply text-secondary_800 dark:text-primary_400;
+    font-weight: 900;
+}
+/* ---------------THE END--------------- */
+/* OTP AUTH FOR SIGN UP */
+.auth-main-container {
+    font-family: var(--primary_font);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.auth-info-heading {
+    font-size: 7rem;
+    font-weight: 900;
+    font-style: bold;
+    @apply text-primary_800 dark:text-primary_100;
+    margin-bottom: 24px;
+}
+
+.auth-parent-caintainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-bottom: 30px;
+}
+
+.auth-first-child-caintainer {}
+
+.input-field-btn-container {
+    width: 200px;
+    height: auto;
+}
+
+.otp-input-box {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.submit-button {
+    width: 65%;
+    height: 40px;
+    font-family: var(--primary_font);
+    font-weight: 900;
+    font-style: bold;
+    font-size: 3.5rem;
+    @apply bg-primary text-secondary_900 rounded-lg;
+    text-transform: uppercase;
+}
+
+.auth-second-child-caintainer {}
+
+.auth-resend-container {}
+
+.auth-resend-btn-container {
+    display: flex;
+    direction: row;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 900;
+    font-style: bold;
+    font-family: var(--primary_font);
+}
+
+.auth-resend-call-to-action-line {
+    @apply text-primary_600 dark:text-primary_200;
+}
+
+.otp-resend-button {
+    @apply text-secondary_500 dark:text-secondary_500;
+}
+
+.resend-btn-right-margin {
+    margin-right: 6px;
+}
+.help-desk-button {
+    font-size: 3rem;
+    font-weight: 600;
+    font-style: bold;
+    font-family: var(--primary_font);
+    @apply text-primary_600 dark:text-primary_200;
+}
+/* ---------------- */
+.ToastContainer {
+    font-size: 3.5rem;
+    font-weight: 400;
+    font-style: bold;
+    font-family: var(--primary_font);
+    @apply text-primary_600 dark:text-primary_600;
+}
+/* -------------This is global responsive design------------- */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    /* Styles */
+    .main-caintainer-to-sign-up-sign-in-proces {
+        position: absolute;
+        width: var(--sign-up-card-width-for-mobile);
+    }
+
+    .input-field-container {
+        font-size: 3.5rem;
+    }
+
+    .input-field-box {
+        height: var(--input-field-box-height-for-mobile);
+    }
+
+    .primary-button {
+        height: 45px;       font-size: 4rem;
+    }
+}
+
+/* ----------------------THE END HERE----------------------------- */

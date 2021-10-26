@@ -1,0 +1,637 @@
+/* /* /* Here write css for index page
+/* Import CSS */
+@import "../../globals";
+@import "../../material/hold-style-material";
+
+:root {
+    /* Dummy padding */
+    /* Define default values for margin and padding */
+    --early-access-page-left-right-pading: 100px;
+    --early-access-page-left-right-pading-for-mobile-version: 0px;
+}
+
+/* Write CSS for SignUp page */
+.early-access-main-body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    @apply bg-primary_200 dark:bg-primary_900;
+}
+
+.global-header-nav-base {
+    width: 100%;
+    height: var(--g-header-height);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: var(--early-access-page-left-right-pading);
+    padding-right: var(--early-access-page-left-right-pading);
+    @apply bg-primary dark:bg-primary_dark_800;
+}
+
+.desktop-header-container{
+    width: 100%;
+    height: 100%;
+    display: unset;
+}
+.mobile-header-container{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.early-access-body-container {
+    width: 100vw;
+    height: 88vh;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    z-index: 0;
+    padding-left: var(--early-access-page-left-right-pading);
+    padding-right: var(--early-access-page-left-right-pading);
+}
+.early-access-profile-container {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.early-access-profile-container::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    background: transparent;
+}
+
+.early-access-user-container {
+    width: 100%;
+    height: 100%;
+}
+.user-container {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
+    padding: 15px;
+    @apply bg-primary dark:bg-primary_dark_800 rounded-lg drop-shadow-xl;
+}
+.user-container::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    background: transparent;
+}
+
+.phone-tab-bottom-nav-menu-base-container{
+    display: none;
+    @apply bg-primary dark:bg-primary_dark_700 drop-shadow-lg rounded-t-sm;
+}
+
+/* -------------This is global responsive design------------- */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+
+    /* Styles */
+    .global-header-nav-base {
+        padding-left: var(--early-access-page-left-right-pading-for-mobile-version);
+        padding-right: var(--early-access-page-left-right-pading-for-mobile-version);
+        height: auto;
+    }
+
+    .desktop-header-container {
+        display: none;
+    }
+
+    .mobile-header-container {
+        display: unset;
+    }
+
+    .early-access-body-container {
+        height: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 10px;
+        padding-left: var(--early-access-page-left-right-pading-for-mobile-version);
+        padding-right: var(--early-access-page-left-right-pading-for-mobile-version);
+        overflow: auto;
+    }
+
+    .early-access-body-container::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        background: transparent;
+
+    }
+
+    .user-container {
+        padding: 8px;
+        overflow: unset;
+    }
+
+    .early-access-profile-container {
+        overflow: unset;
+    }
+
+    .phone-tab-bottom-nav-menu-base-container {
+        display: unset;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-left: var(--early-access-page-left-right-pading-for-mobile-version);
+        padding-right: var(--early-access-page-left-right-pading-for-mobile-version);
+    }
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 576px) and (max-width: 624px) {
+
+    /* Styles */
+
+    .global-header-nav-base {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .early-access-body-container {
+        height: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+     .phone-tab-bottom-nav-menu-base-container {
+        display: unset;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 624px) and (max-width: 676px) {
+
+    /* Styles */
+
+    .global-header-nav-base {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .early-access-body-container {
+        height: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+     .phone-tab-bottom-nav-menu-base-container {
+        display: unset;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 676px) and (max-width: 728px) {
+
+    /* Styles */
+
+    .global-header-nav-base {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .early-access-body-container {
+        height: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+     .phone-tab-bottom-nav-menu-base-container {
+        display: unset;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+
+    /* Styles */
+
+    .global-header-nav-base {
+        padding-left: 40px;
+        padding-right: 40px;
+        height: auto;
+    }
+
+    .desktop-header-container {
+        display: none;
+    }
+
+    .mobile-header-container {
+        display: unset;
+    }
+
+    .early-access-body-container {
+        height: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        overflow: auto;
+    }
+
+    .early-access-body-container::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        background: transparent;
+
+    }
+
+    .user-container {
+        padding: 8px;
+        overflow: unset;
+    }
+
+    .early-access-profile-container {
+        overflow: unset;
+    }
+
+     .phone-tab-bottom-nav-menu-base-container {
+        display: unset;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 868px) {
+
+    /* Styles */
+
+    .global-header-nav-base {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: auto;
+    }
+
+    .desktop-header-container {
+        display: none;
+    }
+
+    .mobile-header-container {
+        display: unset;
+    }
+
+    .early-access-body-container {
+        height: 85%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        overflow: hidden;
+    }
+
+    .early-access-body-container::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        background: transparent;
+
+    }
+
+    .user-container {
+        padding: 8px;
+        overflow: auto;
+    }
+
+
+    .early-access-profile-container {
+        overflow: auto;
+    }
+
+     .phone-tab-bottom-nav-menu-base-container {
+        display: unset;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 868px) and (max-width: 968px) {
+
+    /* Styles */
+
+    .global-header-nav-base {
+        padding-left: 15px;
+        padding-right: 15px;
+        height: auto;
+    }
+
+    .desktop-header-container {
+        display: none;
+    }
+
+    .mobile-header-container {
+        display: unset;
+    }
+
+    .early-access-body-container {
+        height: 85%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+        overflow: hidden;
+    }
+
+    .early-access-body-container::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        background: transparent;
+
+    }
+
+    .user-container {
+        padding: 8px;
+        overflow: auto;
+    }
+
+
+    .early-access-profile-container {
+        overflow: auto;
+    }
+
+    .phone-tab-bottom-nav-menu-base-container {
+        display: unset;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 968px) and (max-width: 1068px) {
+
+    /* Styles */
+
+    .global-header-nav-base {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: auto;
+    }
+
+    .desktop-header-container {
+        display: none;
+    }
+
+    .mobile-header-container {
+        display: unset;
+    }
+
+    .early-access-body-container {
+        height: 85%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow: hidden;
+    }
+
+    .early-access-body-container::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        background: transparent;
+
+    }
+
+    .user-container {
+        padding: 8px;
+        overflow: auto;
+    }
+
+
+    .early-access-profile-container {
+        overflow: auto;
+    }
+
+    .phone-tab-bottom-nav-menu-base-container {
+        display: unset;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 1068px) and (max-width: 1168px) {
+
+    /* Styles */
+
+    .global-header-nav-base {
+        padding-left: 25px;
+        padding-right: 25px;
+        height: auto;
+    }
+
+    .desktop-header-container {
+        display: none;
+    }
+
+    .mobile-header-container {
+        display: unset;
+    }
+
+    .early-access-body-container {
+        height: 85%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 0px;
+        padding-left: 25px;
+        padding-right: 25px;
+        overflow: hidden;
+    }
+
+    .early-access-body-container::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        background: transparent;
+
+    }
+
+    .user-container {
+        padding: 8px;
+        overflow: auto;
+    }
+
+
+    .early-access-profile-container {
+        overflow: auto;
+    }
+
+    .phone-tab-bottom-nav-menu-base-container {
+        display: unset;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+/* Tablate (portrait and landscape) ----------- */
+@media only screen and (min-width: 1168px) and (max-width: 1224px) {
+
+    /* Styles */
+
+    .global-header-nav-base {
+        padding-left: 30px;
+        padding-right: 30px;
+        height: auto;
+    }
+
+    .desktop-header-container {
+        display: none;
+    }
+
+    .mobile-header-container {
+        display: unset;
+    }
+
+
+    .early-access-body-container {
+        height: 85%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+    }
+
+    .early-access-body-container::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        background: transparent;
+
+    }
+
+    .user-container {
+        padding: 8px;
+        overflow: auto;
+    }
+
+
+    .early-access-profile-container {
+        overflow: auto;
+    }
+
+    .phone-tab-bottom-nav-menu-base-container {
+        display: unset;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/* -----------------------THE END HERE------------------------- */

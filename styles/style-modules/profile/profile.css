@@ -1,0 +1,12 @@
+/* /* /* Here write css for index page
+/* Import CSS */
+@import "../../globals";
+@import "../../material/hold-style-material";
+
+/* Write CSS for SignUp page */
+.user-profile-main-body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 9rem;
+    @apply bg-primary_200 dark:bg-primary_900;
+}

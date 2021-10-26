@@ -1,0 +1,57 @@
+/* Here define colors */
+/* Root */
+:root {
+    /* Define Color */
+    /* --PRIMARY COLOR */
+    --primary_color: #ffffff;
+    --primary_color_100: #fafafa;
+    --primary_color_200: #f5f5f5;
+    --primary_color_300: #f0f0f0;
+    --primary_color_400: #dedede;
+    --primary_color_500: #c2c2c2;
+    --primary_color_600: #979797;
+    --primary_color_700: #818181;
+    --primary_color_800: #606060;
+    --primary_color_900: #3c3c3c;
+    /* --SECONDARY COLOR */
+    --secondary_color_50: #ffe9e8;
+    --secondary_color_100: #ffcbbc;
+    --secondary_color_200: #ffa891;
+    --secondary_color_300: #ff8364;
+    --secondary_color_400: #ff6341;
+    --secondary_color_500: #ff3e1f;
+    --secondary_color_600: #ff371b;
+    --secondary_color_700: #ff2f15;
+    --secondary_color_800: #f5240f;
+    --secondary_color_900: #dd0000;
+    /* For dark mode */
+    --primary_dark_color_900: #121212;
+    --primary_dark_color_800: #323232;
+    --primary_dark_color_700: #505050;
+    --primary_dark_color_600: #636363;
+    --primary_dark_color_500: #8a8a8a;
+    --primary_dark_color_400: #ababab;
+    --primary_dark_color_300: #d0d0d0;
+    --primary_dark_color_200: #e2e2e2;
+    --primary_dark_color_100: #eeeeee;
+    --primary_dark_color_50: #f7f7f7;
+    
+   /* DEFINE BACKGROUND IMG*/
+    --primary-cover: url("../../../public/assets/mockups/bg-mockup/bg-cover.png");
+    --bg-slide-1: url("../../../public/assets/mockups/bg-mockup/bg-1.png");
+    --bg-slide-2: url("../../../public/assets/mockups/bg-mockup/bg-2.png");
+    --bg-slide-3: url("../../../public/assets/mockups/bg-mockup/bg-3.png");
+    --bg-slide-4: url("../../../public/assets/mockups/bg-mockup/bg-4.png");
+    --bg-slide-5: url("../../../public/assets/mockups/bg-mockup/bg-5.png");
+    --bg-slide-6: url("../../../public/assets/mockups/bg-mockup/bg-6.png");
+    /* Gradient overlay */
+    --bg-gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 52.69%, rgba(196, 196, 196, 0) 100%);
+    --blue-color: #5013FF;
+    /* User state color */
+    --green-active-color: #08D265;
+    
+}
+/* -------------------------------------------- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

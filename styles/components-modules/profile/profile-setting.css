@@ -1,0 +1,329 @@
+/* -------------Profile Setting CSS----------------*/
+.profile-setting-base-container{
+    width: 100%;
+    height: 100%;
+}
+
+.profile-setting-base-container>div>form {
+    font-size: 5rem;
+    font-family: var(--primary-font);
+}
+
+.profile-setting-base-container>div>form>hr{
+    height: .5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @apply text-primary_600 dark:text-primary_100;
+}
+
+/* visual information */
+
+.visual-info-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+}
+
+.visual-info-container>div {
+    width: 100%;
+    height: 100%;
+}
+
+.visual-info-upload-art-cover {
+    border: 2px solid;
+    border-style: dashed;
+    @apply rounded-lg;
+    @apply border-primary_500 dark:border-primary;
+    position: relative;
+}
+
+
+.visual-info-upload-art-cover-with-cover{
+    border: none !important;
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 2rem;
+    position: relative;
+    font-size: 3rem;
+}
+
+.profile-setting-edit-button-icon{
+    position: relative;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    @apply bg-primary;
+}
+.profile-setting-edit-button-icon>span{
+    font-size: 16px !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @apply text-secondary_900 dark:text-secondary_900;
+}
+
+
+.visual-info-upload-art-cover>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @apply text-primary_700 dark:text-primary_100;
+    font-size: 3.5rem;
+
+}
+
+.visual-info-upload-art-cover>div>span {
+    font-size: 45px;
+}
+
+.visual-info-upload-art-cover>div>h2>span {
+    @apply text-blue-800 dark:text-blue-800;
+}
+
+.visual-info-upload-user-avatar-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.visual-info-upload-user-avatar-container>.avatar{
+    width: 100px;
+    height: 100px;
+    @apply bg-secondary_100 rounded-lg;
+    position: relative;
+}
+
+.visual-info-upload-user-avatar-container>.avatar>img{
+     width: 100px;
+     height: 100px;
+     @apply rounded-lg;
+    border-radius: 2rem;
+    border: 1px solid var(--secondary_color_900);
+}
+
+.visual-info-upload-user-avatar-container>.label{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 10px;
+}
+.visual-info-upload-user-avatar-container>.label>h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+     @apply text-primary_800 dark:text-primary_100;
+}
+.visual-info-upload-user-avatar-container>.label>h2{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 1px;
+    @apply text-primary_600 dark:text-primary_200;
+}
+
+
+.visual-info-upload-user-avatar-container>div>span{
+    @apply text-primary_700 dark:text-primary_100;
+    position: absolute;
+    right: -4%;
+    top: 0;
+}
+
+ {/* Personal information */}
+.personal-info-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+ .personal-info-container>h1,
+ .about-container>h1{
+     font-size: 3.5rem;
+     font-weight: 600;
+     margin-bottom: 8px;
+     @apply text-primary_700 dark:text-primary_100;
+
+ }
+
+ .personal-info-container>div{
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+ } 
+ .personal-info-container>div>div,
+ .marital-status-language-container>div{
+     width: 100%;
+     height: 40px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: start;
+     @apply bg-primary dark:bg-primary_dark_700 shadow-md rounded-sm;
+     margin: 6px;
+     padding: 8px;
+ } 
+
+ .personal-info-container>div>div>input{
+     width: 100%;
+     height: 100%;
+     font-size: 3.2rem;
+     font-family: var(--primary-font);
+     font-weight: 600;
+     position: relative;
+     background-color: transparent !important;
+     box-shadow: none !important;
+     outline: none !important;
+     @apply text-primary_800 dark:text-primary_100 border border-transparent focus:outline-none focus:border-transparent;
+ } 
+ .personal-info-container>div>div>span{
+      @apply text-primary_600 dark:text-primary_100;
+      font-size: 24px;
+ }
+
+ .personal-info-container>div>div>input::placeholder{
+     font-size: 4rem;
+     position: absolute;
+     box-shadow: none;
+     top: 0;
+     @apply text-primary_500 dark:text-primary_100;
+     font-weight: 500;
+     outline: none;
+ }
+
+ #brith-day-container>input,
+ #gender-container>select,
+ .marital-status-language-container>div>select{
+     width: 100%;
+     box-shadow: none;
+     outline: none;
+     font-size: 3.2rem;
+     @apply text-primary_500 dark:text-primary_100;
+ }
+
+ .org-logo-container{
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+ }
+ .org-logo-container>div{
+     width: 100%;
+     margin: 6px;
+    
+ }
+.org-logo-container>.label{
+    font-size: 2.5rem;
+    font-weight: 700;
+    @apply text-primary_600 dark:text-primary_100;
+ }
+
+.logo-uploader-container>div{
+   width: 60px;
+   height: 60px;
+   @apply rounded-lg;
+   position: relative
+ }
+ .logo-uploader-container>div>img{
+    width: 100%;
+   height: 100%;
+   position: absolute;
+   object-fit: cover;
+   @apply rounded-lg;
+   position: relative
+ }
+.logo-uploader-container>div>div{
+    position: relative;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    @apply bg-primary;
+ }
+.logo-uploader-container>div>div>span{
+   font-size: 12px !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @apply text-secondary_900 dark:text-secondary_900;
+   @apply text-secondary_900 dark:text-secondary_900;
+ }
+
+ /* About */
+.about-container>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about-container>div>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about-container>.about-element-container{
+    width: 100%;
+}
+.about-container>.about-element-container>textarea{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    margin-bottom: 8px;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 3rem;
+    @apply text-primary_800 dark:text-primary_100 bg-primary_400 rounded-lg;
+}
+
+.about-container>.about-element-container>textarea::placeholder{
+    font-size: 4rem;
+    padding: 10px;
+}
+.marital-status-language-container{
+    width: 100%;
+}
+.marital-status-language-container>div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Button */
+.btn-container-for-setting-profile{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+.btn-container-for-setting-profile>button{
+    width: 90px;
+    height: 35px;
+    @apply rounded-sm;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.btn-container-for-setting-profile>.cancel-btn{
+    @apply text-primary_800 dark:text-primary_100;
+    border: 1px solid var(--secondary_color_200);
+}
+
+.btn-container-for-setting-profile>.save-btn{
+    margin-left: 24px;
+    @apply text-primary bg-secondary_900 hover:bg-secondary_700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50;
+}

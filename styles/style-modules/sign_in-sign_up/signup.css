@@ -1,0 +1,17 @@
+/* /* /* Here write css for index page
+/* Import CSS */
+@import "../../globals";
+@import "../../material/hold-style-material";
+
+/* Root */
+:root {
+    
+}
+
+/* Write CSS for SignUp page */
+.sign-up-main-body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    @apply bg-primary_200 dark:bg-primary_dark_900;
+}

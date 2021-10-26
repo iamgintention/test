@@ -1,0 +1,26 @@
+.early-access-mobile-tab-nav {
+    width: 100%;
+    @apply bg-primary dark:bg-primary_dark_800;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 8px;
+    font-size: 5rem;
+}
+
+.early-access-mobile-tab-nav>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.early-access-mobile-tab-nav-icon{
+    @apply text-primary_700 dark:text-primary;
+    margin-left: 0px;
+}
+
+.early-access-mobile-tab-nav>h1 {
+    font-family: var(--gogomet-font);
+    @apply text-primary_800 dark:text-primary;
+}

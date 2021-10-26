@@ -1,0 +1,27 @@
+.phone-tab-bottom-nav-base-element-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+}
+
+.phone-tab-bottom-nav-base-element-container>div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.phone-tab-bottom-nav-base-element-container>div>h6 {
+    font-size: 3rem;
+    font-weight: 500;
+    @apply text-primary_700 dark:text-primary_100;
+}
+
+.phone-tab-bottom-nav-icon {
+    font-size: 24px;
+    @apply text-primary_700 dark:text-primary_100;
+}
